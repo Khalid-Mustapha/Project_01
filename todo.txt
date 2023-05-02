@@ -19,3 +19,16 @@ Admin kini that'll allow him add images
 //////////
 Fetch data from the database
 Maybe assign each data to a variable and display at once
+
+//////////
+To display:
+    echo "id: " . $innerarray["id"] . "\n";
+    echo "image1: " . $innerarray["image1"] . "\n";
+    echo "image2: " . $innerarray["image2"] . "\n";
+    echo "phone: " . $innerarray["phone"] . "\n";
+    echo "storage: " . $innerarray["storage"] . "\n";
+    echo "ram: " . $innerarray["ram"] . "\n";
+    echo "android_version: " . $innerarray["android_version"] . "\n";
+    echo "back_camera: " . $innerarray["back_camera"] . "\n";
+    echo "front_camera: " . $innerarray["front_camera"] . "\n";
+    echo "price: " . $innerarray["price"] . "\n";

@@ -119,11 +119,7 @@ if($method=='POST')
 					{   
 				 		// Gives an error if its not ok  
 				 		echo "Sorry, there was a problem uploading your second image.\n";   
-		 			}
-
-
-
- 
+		 			} 
 				// To upload the images
 				$sql= "INSERT INTO image (image1,image2,phone,storage,ram,android_version,back_camera,front_camera,price)VALUES('$image1','$image2','$name','$storage','$ram','$android_version','$bcamera','$fcamera','$price')";
 

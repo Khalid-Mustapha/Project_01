@@ -12,20 +12,6 @@
 	<meta name="keywords" content=" Mobile Phone repair in Ibadan, Laptop repair in Ibadan, Phone repair services, Fast and mobile repair works,Repair my phone, How to repair my phone, mobile repair, quick phone repair" />
 	<meta name="author" content="FreeHTML5.co" />
 
-  <!-- 
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
-
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
@@ -56,9 +42,9 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
+	<!-- [if lt IE 9]
 	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	[endif] -->
 
 	</head>
 	<body>
