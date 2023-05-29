@@ -113,7 +113,7 @@ if($method=='POST')
 				if(move_uploaded_file($_FILES['upload2']['tmp_name'], $target2)) 
 					{   
 						// Tells you if its all ok  
-						echo "The file ". basename( $image2). " has been uploaded, and your information has been added to the directory\n";   
+						echo "The file ". basename( $image2). " has been uploaded, and your information has been added to the directory"."\n";   
 		  		} 
 				else 
 					{   
@@ -126,7 +126,7 @@ if($method=='POST')
 					// Error message
 				if (mysqli_multi_query($db, $sql))
 					{
-				  	echo "Form data successfully stored in database!"; 
+				  	echo "Form data successfully stored in database!"."\n"; 
 					} 
 				else 
 					{       
@@ -209,7 +209,7 @@ if($method=='POST')
 				<h1><a href="index.php">Cell Tech<span>.</span></a></h1>
 				<nav role="navigation">
 					<ul>
-						<li><a href="/../products.html"> Check Products</a></li>
+						<li><a href="/../products.php"> Check Products</a></li>
 						<li class="active"><a href="product.php">Edit Products</a></li>
 					</ul>
 				</nav>

@@ -551,15 +551,23 @@ h1, h2, h3, h4, h5, h6, figure {
   display: table-cell;
   vertical-align: middle;
   min-height: 700px;
+  
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
-  font-size: 70px;
-  font-weight: 400;
+  font-size: 80px;
+  font-weight: 600;
+  opacity: 5;
   color: #fff;
+  text-decoration-color: #fff;  
+  
+  
 }
 @media screen and (max-width: 768px) {
   #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
     font-size: 40px;
+    
+    
+    
   }
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .fh5co-lead {
@@ -1032,6 +1040,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   position: absolute;
   z-index: 1;
+  
 }
 .fh5co-cta .container {
   position: relative;
@@ -1400,6 +1409,51 @@ h1, h2, h3, h4, h5, h6, figure {
 .thick{
   font-size: larger;
 }
+
+
+
+.item-grid-containerk {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the column width as needed */
+  grid-gap: 40px; 
+}
+
+.item-gridk {
+  position: relative;
+  width: 100%;
+  
+  height: 600px; 
+  background-size: cover; 
+  background-position: center center;
+  
+  color: white;
+}
+
+.v-alignk {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+.v-align-middlek {
+  text-align: center;
+}
+
+.titlek {
+  
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+
+}
+
+.categoryk {
+  font-size: 25px;
+  color: white;
+  
+}
+
 /* #shift{
    margin-left: 100px;
 } */

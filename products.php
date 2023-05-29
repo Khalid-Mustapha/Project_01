@@ -1,5 +1,5 @@
 <?php
-include 'retrieve.php';
+// include 'retrieve.php';
 
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ include 'retrieve.php';
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cell Tech &mdash; Mobile Phone Repair in Ibadan</title>
+	<title>Bliss Tech &mdash; Mobile Phone Repair in Ibadan</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -56,13 +56,13 @@ include 'retrieve.php';
 	<header id="fh5co-header" role="banner">
 		<div class="container">
 			<div class="header-inner">
-				<h1><a href="index.php">Cell Tech<span>.</span></a></h1>
+				<h1><a href="index.php">Bliss Tech<span>.</span></a></h1>
 				<nav role="navigation">
 					<ul>
-						<li class="active"><a href="products.html">Products</a></li>
-						<li><a href="services.html">Services</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li class="active"><a href="products.php">Products</a></li>
+						<li><a href="services.php">Services</a></li>
+						<li><a href="about.php">About</a></li>
+						<li><a href="contact.php">Contact</a></li>
 						<li class="cta"><a href="#">Get started</a></li>
 					</ul>
 				</nav>
@@ -74,7 +74,7 @@ include 'retrieve.php';
 	<aside id="fh5co-hero" clsas="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
-		   	<li style="background-image: url(images/slide_3.jpg);">
+		   	<li style="background-image: url(images/maybe.jpg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
@@ -96,7 +96,41 @@ include 'retrieve.php';
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
 					<h2>See our products</h2>
 					<!-- <p>Check out the second-hand phones that have been put up for sale by some customers.</p> -->
-					<p>Work in progress...😉</p>
+					<?php
+						include'connect.php';
+								
+										while($row = mysqli_fetch_assoc($result)) 
+											{	
+												// echo "id " ."||".$row["id"]."||". $row["image1"]."||". $row["image2"]."||". $row["phone"]."||". $row["storage"]."||".$row["ram"]."||".$row["android_version"]."||".$row["back_camera"]."||".$row["front_camera"]."||".$row["price"]."<br>";
+												$image='images/'.$row["image1"];	
+											?>
+									<a href="phone.php">
+										<div class="item-grid-containerk">
+    									<div class="item-gridk" style="background-image: url(<?php echo $image; ?>);">
+      									<div class="v-alignk">
+        									<div class="v-align-middlek">
+          									<h3 class="titlek"><?php echo ucwords($row["phone"]); ?></h3>
+          									<h5 class="categoryk"><?php echo $row["price"]; ?></h5>
+        									</div>
+      									</div>
+    									</div>
+										</div>
+									</a>
+</div>
+
+											<?php
+											}
+											?>
+									
+								
+								<?php
+									// Close DB
+								$db ->close();
+								
+						
+						
+
+?>
 				</div>
 			</div>
 		</div>
@@ -105,41 +139,26 @@ include 'retrieve.php';
 	<footer id="fh5co-footer" role="contentinfo">
 	
 		<div class="container">
-			<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-				<h3>About Us</h3>
-				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-				<p><a href="#" class="btn btn-primary btn-outline with-arrow btn-sm">I'm button <i class="icon-arrow-right"></i></a></p>
-			</div>
+			
 			<div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>Our Services</h3>
 				<ul class="float">
-					<li><a href="#">Web Design</a></li>
-					<li><a href="#">Branding &amp; Identity</a></li>
-					<li><a href="#">Free HTML5</a></li>
-					<li><a href="#">HandCrafted Templates</a></li>
+					<li><a href="services.php">Phone &amp; Laptop repair</a></li>
+					<li><a href="services.php">Used phones</a></li>
+					
 				</ul>
 				<ul class="float">
-					<li><a href="#">Free Bootstrap Template</a></li>
-					<li><a href="#">Free HTML5 Template</a></li>
-					<li><a href="#">Free HTML5 &amp; CSS3 Template</a></li>
-					<li><a href="#">HandCrafted Templates</a></li>
-				</ul>
-
-			</div>
-
-			<div class="col-md-2 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-				<h3>Follow Us</h3>
-				<ul class="fh5co-social">
-					<li><a href="#"><i class="icon-twitter"></i></a></li>
-					<li><a href="#"><i class="icon-facebook"></i></a></li>
-					<li><a href="#"><i class="icon-google-plus"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
+				  <li><a href="services.php">Accessories</a></li>
+					<li><a href="services.php">Pickup and Delivery</a></li>
 				</ul>
 			</div>
+
+
 			
 			
 			<div class="col-md-12 fh5co-copyright text-center">
-				<p>&copy; 2016 Free HTML5 template. All Rights Reserved. <span>Designed with <i class="icon-heart"></i> by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a>  Distributed By: <a class="" href="https://htmltemplates.co" target="_blank">HTML Templates</a> Colored Icons by <a href="https://dribbble.com/TrinhHo" target="_blank">Trinh Ho</a> Demo Images by <a href="http://unsplash.com/" target="_blank">Unsplash</a></span></p>	
+				<p>&copy; <?php echo date('Y') ?>  <span>Designed with <i class="icon-heart"></i> by Khalid Mustapha <br>
+				 Distributed By: <a class="" href="https://htmltemplates.co" target="_blank">HTML Templates</a> 
 			</div>
 			
 		</div>

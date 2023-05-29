@@ -26,10 +26,5 @@
 				} 
 				// Close DB
 			$db ->close();
-
-	if($method=='POST')
-		{
-
-		}
 		
 ?>

@@ -1,24 +1,20 @@
-Add all services you offer to the Services page
-Business Address
-Map
-Hours of operation
-Contact details
-Admin kini that'll allow him add images
-   Save his email and hashed_pass to database✔️
-   Read the entered email on login and check if it corresponds with the saved one
 
-///////////
-1. Create a database table to store the images and other text.
-
-2. Create an HTML form to upload the images and other text to the database.
-
-3. Create a PHP script to process the form data and store it in the database.
 
 4. Create a PHP script to retrieve the images and other text from the database and display them using separate layouts on a different page.
 
-//////////
-Fetch data from the database
-Maybe assign each data to a variable and display at once
+////////////
+
+Use a link so that you may take the images to a new page ( phone.php) .
+
+Then when you get the page , the respective details will be displayed ( look at a phone info website such as the specs website so that you may get several info from them).  
+
+The pictures will be displayed in a grid format and the details will probably be in different sections.
+
+You may make use of php layouts and fetch the details from the database and then use the fetch assoc to display everything all at once.
+
+
+Try to use the css directly and use header with the a maybe you'll be able to command it directly before the header works
+
 
 //////////
 To display:
