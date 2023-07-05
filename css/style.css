@@ -244,7 +244,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 .fh5co-social li a {
   font-size: 22px;
@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
@@ -412,7 +412,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 #fh5co-header nav ul li a {
   color: rgba(255, 255, 255, 0.7);
@@ -1234,7 +1234,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 30px;
   height: 2px;
   color: #fff;
@@ -1412,20 +1412,46 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 
+
+body {
+  background-color: white;
+}
+
+/* Add this style to center the "See our products" header */
+.fh5co-heading {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px; 
+}
+
+/* Add this style to the grid container */
+#fh5co-grid-products .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.col-md-4 {
+  padding: 10px;
+}
+
 .item-grid-containerk {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the column width as needed */
-  grid-gap: 40px; 
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 
 .item-gridk {
   position: relative;
   width: 100%;
-  
-  height: 600px; 
-  background-size: cover; 
-  background-position: center center;
-  
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
   color: white;
 }
 
@@ -1437,24 +1463,19 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .v-align-middlek {
-  text-align: center;
+  padding: 10px;
+  background-color: lightgray;
+  color: black; 
 }
 
-.titlek {
-  
-  font-size: 50px;
-  font-weight: bold;
-  color: white;
 
+.titlek {
+  font-size: 24px;
+  margin: 0;
 }
 
 .categoryk {
-  font-size: 25px;
-  color: white;
+  font-size: 18px;
+  margin: 0;
   
 }
-
-/* #shift{
-   margin-left: 100px;
-} */
-/*# sourceMappingURL=style.css.map */

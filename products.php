@@ -1,7 +1,3 @@
-<?php
-// include 'retrieve.php';
-
-?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -89,53 +85,41 @@
 	</aside>
 
 	
-
 	<div id="fh5co-grid-products" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>See our products</h2>
-					<!-- <p>Check out the second-hand phones that have been put up for sale by some customers.</p> -->
-					<?php
-						include'connect.php';
-								
-										while($row = mysqli_fetch_assoc($result)) 
-											{	
-												// echo "id " ."||".$row["id"]."||". $row["image1"]."||". $row["image2"]."||". $row["phone"]."||". $row["storage"]."||".$row["ram"]."||".$row["android_version"]."||".$row["back_camera"]."||".$row["front_camera"]."||".$row["price"]."<br>";
-												$image='images/'.$row["image1"];	
-											?>
-									<a href="phone.php">
-										<div class="item-grid-containerk">
-    									<div class="item-gridk" style="background-image: url(<?php echo $image; ?>);">
-      									<div class="v-alignk">
-        									<div class="v-align-middlek">
-          									<h3 class="titlek"><?php echo ucwords($row["phone"]); ?></h3>
-          									<h5 class="categoryk"><?php echo $row["price"]; ?></h5>
-        									</div>
-      									</div>
-    									</div>
-										</div>
-									</a>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+        <h2>See our products</h2>
+      </div>
+    </div>
+    <div class="row">
+      <?php
+        include 'connect.php';
+
+        while ($row = mysqli_fetch_assoc($result)) {
+          $image = 'images/' . $row["image1"];
+      ?>
+      <div class="col-md-4">
+        <a href="phone.php">
+          <div class="item-grid-containerk">
+            <div class="item-gridk" style="background-image: url(<?php echo $image; ?>);" alt='$phonename'>
+              <div class="v-alignk">
+                <div class="v-align-middlek">
+                  <h3 class="titlek"><?php echo ucwords($row["phone"]); ?></h3>
+                  <h5 class="categoryk"><?php echo $row["price"]; ?></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <?php
+        }
+      ?>
+    </div>
+  </div>
 </div>
 
-											<?php
-											}
-											?>
-									
-								
-								<?php
-									// Close DB
-								$db ->close();
-								
-						
-						
-
-?>
-				</div>
-			</div>
-		</div>
-
-	
 	<footer id="fh5co-footer" role="contentinfo">
 	
 		<div class="container">
